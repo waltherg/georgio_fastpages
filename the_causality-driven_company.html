@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>The Causality-Driven Company | georg.io</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="The Causality-Driven Company" />
+<meta name="author" content="Georg Walther" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Increasingly, enterprises embrace decision-making based on data, thus becoming data-driven companies. However, decisions based purely on data can lead to mistakes and may waste resources. Combining causal models with data promises to fix these issues. In this article I explain why the causality-driven company is the sensible step up from the data-driven company." />
+<meta property="og:description" content="Increasingly, enterprises embrace decision-making based on data, thus becoming data-driven companies. However, decisions based purely on data can lead to mistakes and may waste resources. Combining causal models with data promises to fix these issues. In this article I explain why the causality-driven company is the sensible step up from the data-driven company." />
+<link rel="canonical" href="https://georg.io/the_causality-driven_company" />
+<meta property="og:url" content="https://georg.io/the_causality-driven_company" />
+<meta property="og:site_name" content="georg.io" />
+<meta property="og:image" content="https://georg.io/images/posts/evolution_causality_driven_company.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-10T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Increasingly, enterprises embrace decision-making based on data, thus becoming data-driven companies. However, decisions based purely on data can lead to mistakes and may waste resources. Combining causal models with data promises to fix these issues. In this article I explain why the causality-driven company is the sensible step up from the data-driven company.","url":"https://georg.io/the_causality-driven_company","@type":"BlogPosting","headline":"The Causality-Driven Company","dateModified":"2020-05-10T00:00:00-05:00","datePublished":"2020-05-10T00:00:00-05:00","author":{"@type":"Person","name":"Georg Walther"},"image":"https://georg.io/images/posts/evolution_causality_driven_company.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://georg.io/the_causality-driven_company"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://georg.io/feed.xml" title="georg.io" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45212489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-45212489-1');
+</script>
+
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">georg.io</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About Me</a><a class="page-link" href="/search/">Search</a><a class="page-link" href="/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">The Causality-Driven Company</h1><p class="page-description">Increasingly, enterprises embrace decision-making based on data, thus becoming data-driven companies. However, decisions based purely on data can lead to mistakes and may waste resources. Combining causal models with data promises to fix these issues. In this article I explain why the causality-driven company is the sensible step up from the data-driven company.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-05-10T00:00:00-05:00" itemprop="datePublished">
+        May 10, 2020
+      </time>• 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span class="p-author h-card" itemprop="name">Georg Walther</span></span>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#causal inference">causal inference</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#causal discovery">causal discovery</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#data-driven company">data-driven company</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/categories/#causality-driven company">causality-driven company</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#the-data-driven-company">The data-driven company</a></li>
+<li class="toc-entry toc-h2"><a href="#machine-learning-applications-for-the-data-driven-company">Machine learning applications for the data-driven company</a></li>
+<li class="toc-entry toc-h2"><a href="#smart-manufacturing">Smart manufacturing</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#product-quality-prediction">Product quality prediction</a></li>
+<li class="toc-entry toc-h3"><a href="#using-our-prediction-model">Using our prediction model</a></li>
+<li class="toc-entry toc-h3"><a href="#issue-with-our-prediction-model">Issue with our prediction model</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#the-missing-piece-causality">The missing piece: causality</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#variables-and-parameters-are-often-interconnected">Variables and parameters are often interconnected</a></li>
+<li class="toc-entry toc-h3"><a href="#interconnected-variables-are-hard-to-disentangle">Interconnected variables are hard to disentangle</a></li>
+<li class="toc-entry toc-h3"><a href="#causal-inference-toolset-do-calculus">Causal inference toolset: Do-calculus</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#becoming-a-causality-driven-company">Becoming a causality-driven company</a></li>
+</ul><h2 id="the-data-driven-company">
+<a class="anchor" href="#the-data-driven-company" aria-hidden="true"><span class="octicon octicon-link"></span></a>The data-driven company</h2>
+
+<p>Much has been written on data being the new oil and enterprises needing to embrace big data and machine learning to benefit in three important ways:</p>
+
+<ol>
+  <li>Utilizing existing resources more efficiently thus reducing cost,</li>
+  <li>Increasing success rates thus increasing revenue, and</li>
+  <li>Developing entirely new revenue streams thus diversifying their business.</li>
+</ol>
+
+<p>Enterprises are said to be data-driven once their entire organization is data-first, meaning:</p>
+
+<ol>
+  <li>Both their core processes (e.g. production lines) and supporting processes (e.g. recruiting) are quantifiable through transparent metrics, and</li>
+  <li>All business units have a data mindset, i.e. are driven by testable hypotheses, and have the technological means for it.</li>
+</ol>
+
+<h2 id="machine-learning-applications-for-the-data-driven-company">
+<a class="anchor" href="#machine-learning-applications-for-the-data-driven-company" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine learning applications for the data-driven company</h2>
+
+<p>There a numerous applications of big data and machine learning in industry and the enterprise. Common applications include:</p>
+
+<ul>
+  <li>Predictive maintenance,</li>
+  <li>Demand forecasting,</li>
+  <li>Optimal pricing,</li>
+  <li>Intelligent routing,</li>
+  <li>Data-driven customer support (e.g. chatbots), amd</li>
+  <li>Churn prediction.</li>
+</ul>
+
+<p>Another key application in industry is smart manufacturing which promises to decrease cost and increase both production line output and quality.</p>
+
+<h2 id="smart-manufacturing">
+<a class="anchor" href="#smart-manufacturing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smart manufacturing</h2>
+
+<h3 id="product-quality-prediction">
+<a class="anchor" href="#product-quality-prediction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Product quality prediction</h3>
+
+<p><img src="/images/posts/smart_manufacturing_machine_learning.jpg" alt="Smart manufacturing with machine learning" title="Figure 1: Production floor indicating production parameters A, B, C, and D alongside resultant quality score QA of items coming off the production line. (Original photo by Birmingham Museums Trust on Unsplash)"></p>
+
+<p>Consider our production line, pictured above in Figure 1, which consists of a number of workstations that the different parts of our product need to pass through before being assembled into our final product.</p>
+
+<p>The various workstations can be described by parameters, e.g. how much pressure or force is applied, how fast a tool is spinning, or categories such as the type of drill used.</p>
+
+<p>Our fictional production line above has four production parameters spread across its workstations: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span>.</p>
+
+<p>At the far end of our production line the quality of our assembled product is quantified in the quality assurance gateway (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span>).
+Here, either an employee or a machine visually inspects or physically tests manufactured items to verify their quality before they are shipped to customers.</p>
+
+<p>Since our company is data-driven we collect data on every item coming off our production line. Such a data set may look as follows:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product ID</th>
+      <th style="text-align: center">Timestamp</th>
+      <th style="text-align: center">A</th>
+      <th style="text-align: center">B</th>
+      <th style="text-align: center">C</th>
+      <th style="text-align: center">D</th>
+      <th style="text-align: center">QA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td style="text-align: center">2020-05-10 14:35:00</td>
+      <td style="text-align: center">1.2</td>
+      <td style="text-align: center">102.1</td>
+      <td style="text-align: center">ZZ</td>
+      <td style="text-align: center">YY</td>
+      <td style="text-align: center">0.98</td>
+    </tr>
+    <tr>
+      <td>456</td>
+      <td style="text-align: center">2020-05-10 16:20:00</td>
+      <td style="text-align: center">1.1</td>
+      <td style="text-align: center">104.3</td>
+      <td style="text-align: center">ZZ</td>
+      <td style="text-align: center">XX</td>
+      <td style="text-align: center">0.96</td>
+    </tr>
+    <tr>
+      <td>789</td>
+      <td style="text-align: center">2020-05-11 06:04:00</td>
+      <td style="text-align: center">1.3</td>
+      <td style="text-align: center">100.6</td>
+      <td style="text-align: center">ZX</td>
+      <td style="text-align: center">YY</td>
+      <td style="text-align: center">0.83</td>
+    </tr>
+    <tr>
+      <td>012</td>
+      <td style="text-align: center">2020-05-11 10:45:00</td>
+      <td style="text-align: center">1.1</td>
+      <td style="text-align: center">101.3</td>
+      <td style="text-align: center">ZX</td>
+      <td style="text-align: center">YZ</td>
+      <td style="text-align: center">0.92</td>
+    </tr>
+    <tr>
+      <td>…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+      <td style="text-align: center">…</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> of our production line are numerical features while parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span> are categorical features.
+Our quality measurement <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> is a numerical target variable which takes values between 0 and 1 with the latter representing the highest possible product quality.</p>
+
+<p>Provided that we collect enough production line data, machine learning offers a rich toolbox for predicting the expected <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> score or whether our <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> score will lie above a certain threshold.
+The former application is called regression (predict <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> value) while the latter is called classification (predict if <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> is greater than a threshold).</p>
+
+<p>To implement these applications there are numerous established machine learning models, some of which are:</p>
+
+<ul>
+  <li>Linear and polynomial regression,</li>
+  <li>(Deep) neural networks / deep learning,</li>
+  <li>Classification and regression trees (CART),</li>
+  <li>Ensemble methods such as random forests and gradient tree boosting,</li>
+  <li>Logistic regression,</li>
+  <li>Support vector machines,</li>
+  <li>Gaussian processes, and</li>
+  <li>Naive Bayes.</li>
+</ul>
+
+<p>These machine learning models allow us to learn the potentially complex relationship between our production line parameters (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span>) and resultant product quality (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span>).</p>
+
+<p>These are also the same machine learning models used routinely to implement the other aforementioned industry applications such as demand forecasting or churn prediction.</p>
+
+<p>So training a machine learning model on our production line data we get something like this:</p>
+
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext><mo>=</mo><mtext mathvariant="monospace">model</mtext><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>D</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\verb!QA! = \verb!model!(A, B, C, D)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord texttt">model</span></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span></span></span></span>.</p>
+
+<p>Where our model predicts the quality of our final product based on the parameters of our production line.</p>
+
+<h3 id="using-our-prediction-model">
+<a class="anchor" href="#using-our-prediction-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using our prediction model</h3>
+
+<p>Imagine we manage to train a highly accurate machine learning model on our production line data - what do we do with it?</p>
+
+<p>Sure, if measuring the quality of our product (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span>) is prohibitively expensive we could cut cost by using our model to determine the quality score for items coming off our production line.</p>
+
+<p>We could also try and adapt our model so that it provides accurate quality score predictions early in the production cycle for a given item - thus allowing us to cancel work on substandard items before they consume resources unnecessarily.</p>
+
+<p>But really, what we are most likely interested in is:</p>
+
+<p>How should we tweak individual production parameters to increase product quality?</p>
+
+<h3 id="issue-with-our-prediction-model">
+<a class="anchor" href="#issue-with-our-prediction-model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Issue with our prediction model</h3>
+
+<p>Unfortunately, our machine learning model does not hold the answer to our core question:
+Out of the box it will not help us optimize individual production parameters to improve our quality score <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span>.</p>
+
+<p>Let’s see why that is.</p>
+
+<p>We can write our machine learning model as a function:</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>D</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\verb!QA! = f(A, B, C, D),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span>
+
+<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span></span></span> is our model that predicts the quality score for items manufactured with production parameters
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span>.</p>
+
+<p>The issue with this model is that it learns the relationship between quality score and production parameters “in bulk” - or in other words the conditional distribution of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> jointly on production parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span></span></span></span>.</p>
+
+<p>The only sensible operation we can carry out with this model is asking all production line workers for their presently (or planned) production parameter values, inputting them into our model, and informing our colleagues in production of the quality score we expect to achieve with their configuration.</p>
+
+<p>Of course, a far more desirable operation would be to take the presently used production parameters, e.g.</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">(A, B, C, D) = (a, b, c, d),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span>
+
+<p>tweak a single parameter, e.g. increase parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> by 10%, and compute the newly expected quality score</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA modified</mtext><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>a</mi><mo separator="true">,</mo><mn>1.1</mn><mo>×</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi>d</mi><mo stretchy="false">)</mo><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\verb!QA modified! = f(a, 1.1 \times b, c, d).</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA modified</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">.</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">c</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mclose">)</span><span class="mord">.</span></span></span></span></span>
+
+<p>If the newly predicted <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA modified</mtext></mrow><annotation encoding="application/x-tex">\verb!QA modified!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA modified</span></span></span></span></span> turns out greater than the presently achieved or predicted quality score we would go back to the production floor and ask our colleague manning the workstation to increase their parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> by 10%.</p>
+
+<p>Unfortunately, this operation of tweaking and optimizing individual input variables (production parameters) is not supported by our machine learning model.</p>
+
+<p>In essence, our model learns the bulk relationship between the entire set of production parameters and quality score, and not the individual impact of each production parameter on the quality score - as illustrated in the following sketch:</p>
+
+<p><img src="/images/posts/smart_manufacturing_bulk_parameters.jpg" alt="Smart manufacturing with machine learning: Expected of and provided by machine learning model." title="Figure 2: We expect our machine learning model to learn the impact of each production parameter on the quality score QA individually - after all we write our model as a function f(a, b, c, d) with each parameter spelled out individually. However, what our machine learning model really learns is the bulk influence of our production parameters on quality score QA - essentially we learn the joint relationship between QA and a four-dimensional variable made up of our production parameters. (Original photo by Birmingham Museums Trust on Unsplash)"></p>
+
+<p>This problem pertains to most machine learning models independent of the specific problem tackled.</p>
+
+<p>How do we modify our approach so that we can estimate the impact of individual production parameter modifications and help our colleagues on the production floor make optimal, surgical changes to their manufacturing process?</p>
+
+<p>One major piece to closing this gap is causality.</p>
+
+<h2 id="the-missing-piece-causality">
+<a class="anchor" href="#the-missing-piece-causality" aria-hidden="true"><span class="octicon octicon-link"></span></a>The missing piece: causality</h2>
+
+<h3 id="variables-and-parameters-are-often-interconnected">
+<a class="anchor" href="#variables-and-parameters-are-often-interconnected" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables and parameters are often interconnected</h3>
+
+<p>To disentangle their individual contributions, we first need to account for how our production parameters influence one another and the quality score.</p>
+
+<p>To understand the connections between our production parameters and the quality score, we pop down to the production floor and chat with our colleagues manning the individual workstations.
+From them we learn:</p>
+
+<ul>
+  <li>When the stiffness of the raw material (A) increases then downstream workers increase the pressure applied on the item (B),</li>
+  <li>Depending on the stiffness of the raw material (A) the type of downstream drill (C) is chosen,</li>
+  <li>The worker choosing the type of drill (C) also informs the worker moulding our item under pressure (B) since they need to balance bore friction and metal stiffness,</li>
+  <li>The worker applying a specific type of finish (D) to our product is not affected by the choices of their co-workers.</li>
+</ul>
+
+<p>Armed with these insights from our production floor we draw up the following causal model - showing the connections among our production parameters and the quality score of our product:</p>
+
+<p><img src="/images/posts/smart_manufacturing_causal_inference.jpg" alt="Smart manufacturing causal model." title="Figure 3: Production line with causal links between production parameters indicated by arrows. Production parameters are linked due to practical considerations and the experience of production floor workers. Note: This kind of graph is referred to as a causal model. (Original photo by Birmingham Museums Trust on Unsplash)"></p>
+
+<p>A simplistic, and perhaps crude, way of interpreting the arrows between parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>, and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> is to imagine these arrows were unidirectional mechanical springs.
+If I pull on parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> by changing it somehow, I also move around parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> - however pulling on <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> does not affect <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> as that spring is unidirectional.</p>
+
+<h3 id="interconnected-variables-are-hard-to-disentangle">
+<a class="anchor" href="#interconnected-variables-are-hard-to-disentangle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interconnected variables are hard to disentangle</h3>
+
+<p>To reiterate, our main use for a machine learning model that predicts the quality score of manufactured items is to support our colleagues on the production floor in optimizing individual production parameters to maximize our overall output quality.</p>
+
+<p>Our causal model (Figure 3) makes it apparent that our model should be more complex than previously thought. The connections in our causal model indicate that we should write our model as</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>h</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>h</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>D</mi><mo stretchy="false">)</mo><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">\verb!QA! = f(g(A, h(A)), h(A), D),</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mpunct">,</span></span></span></span></span>
+
+<p>where both <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> are functions of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span></p>
+
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>g</mi><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>C</mi><mo>=</mo><mi>h</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B = g(A, C), C = h(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span>.</p>
+
+<p>In short: In addition to teaching our machine learning model the relationship between our four production parameters and the quality score, we also need to teach our model the various relationships between our production parameters before we can use our model to optimize individual workstations.</p>
+
+<p>To learn all these relationships we need a lot of data and variation in production parameters that show how the parameters influence one another.
+We may be inclined to go down to the manufacturing floor and start experimenting at random with our production parameters generating enough data to learn both the interconnections between the production parameters (<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>g</mi><mo stretchy="false">(</mo><mi>A</mi><mo separator="true">,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B = g(A, C)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mclose">)</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mi>h</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">C = h(A)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span></span></span></span>) and their individual impact on our quality score <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span>.</p>
+
+<p>However, each manufactured item with substandard quality due to a randomly selected combination of production parameters means money lost for our company.</p>
+
+<p>This approach, called randomized experiment or randomized controlled trial, is oftentimes undesirable or simply infeasible:</p>
+
+<ol>
+  <li>In the case of our production line (and smart manufacturing in general), randomly assigning production parameters to measure their individual impact would be both very time consuming and prohibitively expensive - imagine all the low-quality items made and discarded,</li>
+  <li>In e-commerce, for smart pricing, it is in fact prohibited by law to price the same item differently for different customers in the same market,</li>
+  <li>In customer care it would be counterproductive to treat some customers poorly just to see how their purchase behavior and brand loyalty are affected,</li>
+  <li>In predictive maintenance it would be questionable or prohibited not to perform best practice maintenance steps on individual items to see how they deteriorate differently, and</li>
+  <li>In online marketing it is ofentimes prohibitively complex or infeasible, due to data protection legislation, to cleanly understand the effect (uplift) of isolated marketing parameters on individual users.</li>
+</ol>
+
+<p>Hence, we cannot rely on randomized experiments to understand how to optimally help our production floor colleagues.</p>
+
+<p>So what we are left with is continue doing what we do on the production floor, and use the production data generated under normal operating conditions (observational data) to estimate the impact of each production parameter individually on our quality score.</p>
+
+<p>To achieve this we need to rely on both our causal model (Figure 3) and a toolset from the field of causal inference called do-calculus.</p>
+
+<h3 id="causal-inference-toolset-do-calculus">
+<a class="anchor" href="#causal-inference-toolset-do-calculus" aria-hidden="true"><span class="octicon octicon-link"></span></a>Causal inference toolset: Do-calculus</h3>
+
+<p>The components we have gathered so far are:</p>
+
+<ul>
+  <li>A causal model of our production floor (Figure 3), and</li>
+  <li>Lots of observational data of production parameter settings and measured resultant quality score <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span>.</li>
+</ul>
+
+<p>Let us go through a thought experiment illustrated in the image below (Figure 4): How would the expected quality score <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> change if our colleague in workstation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> chose their production parameter independently of their colleagues in workstations <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>?</p>
+
+<p><img src="/images/posts/smart_manufacturing_intervention.jpg" alt="Smart manufacturing with machine learning" title="Figure 4: Theoretical randomized experiment where we advise our worker in workstation B to apply specific amounts of pressure 'b' instead of aligning their work with workstations A and C. When assigning parameter B independently from parameters A and C the causal links between these parameters is broken as is indicated by the missing arrows. (Original photo by Birmingham Museums Trust on Unsplash)"></p>
+
+<p>This is what the notation in Figure 4 relates to: <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>o</mi><mo stretchy="false">(</mo><mi>B</mi><mo>=</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">do(B = b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span> describes a theoretical scenario where production parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> is assigned to hold value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> - instead of a scenario where parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> is observed to equal value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span>.</p>
+
+<p>Note the seemingly subtle but important difference: If we go back to our observational data generated under normal operating conditions then observing <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">B = b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> implies something about production parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span> since, according to our causal model (Figure 3), these are causally connected!
+However, forcing (or intervening on) parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> by setting it to value <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi></mrow><annotation encoding="application/x-tex">b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">b</span></span></span></span> breaks that causal link between the workstations - and this is what the notation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">do</mtext><mo stretchy="false">(</mo><mi>B</mi><mo>=</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\verb!do!(B=b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord texttt">do</span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span> signifies.</p>
+
+<p>In essence <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">do</mtext><mo stretchy="false">(</mo><mi>B</mi><mo>=</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\verb!do!(B=b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord texttt">do</span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span> would mean asking our colleague in workstation <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> to stop listening to their colleagues in workstations <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>.</p>
+
+<p>Since doing so in reality on the production floor would incur high cost due to lost production we simulate the intervention <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">do</mtext><mo stretchy="false">(</mo><mi>B</mi><mo>=</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\verb!do!(B = b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord texttt">do</span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span>! using the observational data we collect under normal operating conditions anyway.</p>
+
+<p>To simulate <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">do</mtext><mo stretchy="false">(</mo><mi>B</mi><mo>=</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\verb!do!(B = b)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord text"><span class="mord texttt">do</span></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span></span></span></span> we apply a set of algebraic rules, called do-calculus, to our causal model from Figure 3 and draw on our regular observational data from the production floor.</p>
+
+<p>In technical terms, do-calculus allows us to turn theoretical interventional distributions into regular conditional distributions that we can compute using our observational data.</p>
+
+<p>With this toolset we can finally estimate the individual effect of tweaking production parameter <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span> on quality score <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="monospace">QA</mtext></mrow><annotation encoding="application/x-tex">\verb!QA!</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.75em;vertical-align:-0.13889em;"></span><span class="mord text"><span class="mord texttt">QA</span></span></span></span></span> thus allowing us to optimize surgically our manufacturing output.</p>
+
+<h2 id="becoming-a-causality-driven-company">
+<a class="anchor" href="#becoming-a-causality-driven-company" aria-hidden="true"><span class="octicon octicon-link"></span></a>Becoming a causality-driven company</h2>
+
+<p>I hope I managed to convince you of the important difference between recording lots of data and being able to optimize individual steps of your business operations based on your data.</p>
+
+<p>The former is limited to prediction: Your organization can predict future outcomes if all internal processes continue to be operated as usual.
+This is the essence of the data-driven company.</p>
+
+<p>The latter adds explanation to prediction: Your organization can explain how outcomes and future outcomes come about. And once you can explain how your processes lead to outcomes you can start optimizing individual components of your processes and organization.
+This enables you to analyze what would happen if you changed “the way you have always done things” - thus elevating you to a causality-driven company.</p>
+
+<p>How can you start using causal inference and tools such as do-calculus to optimize your business?
+And how do you eventually become a causality-driven company?</p>
+
+<p>A roadmap of this kind, a causality strategy if you will, would certainly be an interesting subject for another blog article.</p>
+
+<p>Until then, I would start by becoming a data-driven company first:</p>
+
+<ul>
+  <li>Set up data collection across all key operations of your business,</li>
+  <li>Start working on machine learning prototypes for predicting key business metrics based on your collected data, and</li>
+  <li>Start asking yourself: Once I can predict my business metrics with machine learning, what specific changes should I make to my business to optimize these metrics?</li>
+</ul>
+
+<p>Once you get to the point of wanting to make surgical decisions based on your machine learning model, causality and causal inference will start playing key roles.</p>
+
+<p><a href="/images/posts/evolution_causality_driven_company.png" target="_blank">
+<img src="/images/posts/evolution_causality_driven_company.png" alt="Evolution of the causality-driven company" title="Figure 5: The evolution of the causality-driven company. Companies that can quantify and predict their key operations are driven by data alone. Oftentimes, data-driven companies are limited to predictions in the realm of their established processes. Companies that can both predict and explain are able to surgically optimize their operations or products. These causality-driven companies can break open and optimize their established (status quo) processes based both on data and a causal understanding of their operations. (Illustration based on Christoper Penn's illustration of the evolution of the data-driven company).">
+</a></p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="waltherg/georgio_fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/the_causality-driven_company" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>My personal blog on tech and data</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/waltherg" title="waltherg"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/georgwalther" title="georgwalther"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/GeorgRWalther" title="GeorgRWalther"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
