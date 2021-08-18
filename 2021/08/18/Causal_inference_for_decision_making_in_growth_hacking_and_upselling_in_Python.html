@@ -108,7 +108,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      15 min read
     
 </span></p>
 
@@ -153,6 +153,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Introduction">Introduction </a></li>
+<li class="toc-entry toc-h2"><a href="#Let's-estimate-the-average-treatment-effect-and-make-a-decision!">Let&#39;s estimate the average treatment effect and make a decision! </a></li>
+<li class="toc-entry toc-h2"><a href="#References-and-further-material-...">References and further material ... </a></li>
 <li class="toc-entry toc-h2"><a href="#Install-and-load-libraries">Install and load libraries </a></li>
 <li class="toc-entry toc-h2"><a href="#Randomized-controlled-trial-/-experimental-data">Randomized controlled trial / experimental data </a></li>
 <li class="toc-entry toc-h2"><a href="#Average-treatment-effect-on-post-signup-spend-for-experimental-data">Average treatment effect on post-signup spend for experimental data </a></li>
@@ -168,6 +171,40 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Introduction">
+<a class="anchor" href="#Introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction<a class="anchor-link" href="#Introduction"> </a>
+</h2>
+<p>Wow, growth hacking <em>and</em> upselling all in the same article? Also Python.</p>
+<p>Okay, let's start at the beginning. Imagine the following scenario: You're responsible for increasing the amount of money users spend on your e-commerce platform.</p>
+<p>You and your team come up with different measures you could implement to achieve your goal. Two of these measures could be:</p>
+<ul>
+<li>Provide a discount on your best-selling items,</li>
+<li>Implement a rewards program that incentivices repeat purchases.</li>
+</ul>
+<p>Both of these measures are fairly complex with each incurring a certain, probably known, amount of cost and an unknown effect on your customers' spending behaviour.</p>
+<p>To decide which of these two possible measures is worth both the effort and incurred cost you need to estimate their effect on customer spend.</p>
+<p>A natural way of estimating this effect is computing the following:</p>
+<p>$\textrm{avg}(\textrm{spend} | \textrm{treatment} = 1) - \textrm{avg}(\textrm{spend} | \textrm{treatment} = 0) = \textrm{ATE}$.</p>
+<p>Essentially you would compute the average spend of users who received the treatment (received a discount or signed up for rewards) and subtract from that the average spend of users who didn't receive the treatment.</p>
+<p>Without discussing the details of the underlying potential outcomes framework, the above expression is called the average treatment effect (ATE).</p>
+<h2 id="Let's-estimate-the-average-treatment-effect-and-make-a-decision!">
+<a class="anchor" href="#Let's-estimate-the-average-treatment-effect-and-make-a-decision!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Let's estimate the average treatment effect and make a decision!<a class="anchor-link" href="#Let's-estimate-the-average-treatment-effect-and-make-a-decision!"> </a>
+</h2>
+<p>So now we'll just analyze our e-commerce data of treated and untreated customers and compute the average treatment effect (ATE) for each proposed measure, right? Right?</p>
+<p>Before you rush ahead with your ATE computations - now is a good time to take a step back and contemplate how your data was generated in the first place(data-generating process).</p>
+<h2 id="References-and-further-material-...">
+<a class="anchor" href="#References-and-further-material-..." aria-hidden="true"><span class="octicon octicon-link"></span></a>References and further material ...<a class="anchor-link" href="#References-and-further-material-..."> </a>
+</h2>
+<p>Before we continue: My example here is based on a tutorial by the authors of the excellent DoWhy library. You can find the original tutorial here:</p>
+<p><a href="https://github.com/microsoft/dowhy/blob/master/docs/source/example_notebooks/dowhy_example_effect_of_memberrewards_program.ipynb">https://github.com/microsoft/dowhy/blob/master/docs/source/example_notebooks/dowhy_example_effect_of_memberrewards_program.ipynb</a></p>
+<p>And more on DoWhy here: <a href="https://microsoft.github.io/dowhy/">https://microsoft.github.io/dowhy/</a></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
