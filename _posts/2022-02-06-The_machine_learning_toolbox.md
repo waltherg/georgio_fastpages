@@ -10,34 +10,32 @@ categories: [machine learning, data science]
 image: images/code_and_glasses.jpg
 ---
 
-## The machine learning toolbox
+## Communities
 
-### Communities
-
-#### ML Collective
+### ML Collective
 
 The ML Collective is a nonprofit organization that connects you with other machine learning practicioners.
 
-https://mlcollective.org/
+[https://mlcollective.org/]
 
-#### Kaggle
+### Kaggle
 
 The primary supervised learning machine learning competition platform
 
-https://www.kaggle.com/
+[https://www.kaggle.com/]
 
-### Data manipulation
+## Data manipulation
 
-#### Pandas
+### Pandas
 
 Pandas is the primary data manipulation framework for data scientists in Python.
 It entails and operates on two primary data models: Series, one-dimensional data / table columns, and dataframes, two-dimensional data akin to tables.
 
-##### When (not) to use it
+#### When (not) to use it
 
 - Use when the data you're manipulating fit in memory
 
-##### Further reading
+#### Further reading
 
-- https://pandas.pydata.org/
+- [https://pandas.pydata.org/]
 - [Python for Data Analysis, 3rd edition](https://wesmckinney.com/book/)
