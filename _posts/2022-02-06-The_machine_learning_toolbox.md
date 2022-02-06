@@ -12,6 +12,20 @@ image: images/code_and_glasses.jpg
 
 ## The machine learning toolbox
 
+### Communities
+
+#### ML Collective
+
+The ML Collective is a nonprofit organization that connects you with other machine learning practicioners.
+
+https://mlcollective.org/
+
+#### Kaggle
+
+The primary supervised learning machine learning competition platform
+
+https://www.kaggle.com/
+
 ### Data manipulation
 
 #### Pandas
