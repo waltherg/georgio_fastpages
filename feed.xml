@@ -1,38 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://georg.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://georg.io/" rel="alternate" type="text/html" /><updated>2022-02-06T13:21:43-06:00</updated><id>https://georg.io/feed.xml</id><title type="html">georg.io</title><subtitle>My personal blog on tech and data</subtitle><entry><title type="html">The Machine Learning Toolbox</title><link href="https://georg.io/mltoolbox" rel="alternate" type="text/html" title="The Machine Learning Toolbox" /><published>2022-02-06T00:00:00-06:00</published><updated>2022-02-06T00:00:00-06:00</updated><id>https://georg.io/The_machine_learning_toolbox</id><content type="html" xml:base="https://georg.io/mltoolbox">&lt;h2 id=&quot;the-machine-learning-toolbox&quot;&gt;The machine learning toolbox&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://georg.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://georg.io/" rel="alternate" type="text/html" /><updated>2022-02-06T13:29:45-06:00</updated><id>https://georg.io/feed.xml</id><title type="html">georg.io</title><subtitle>My personal blog on tech and data</subtitle><entry><title type="html">The Machine Learning Toolbox</title><link href="https://georg.io/mltoolbox" rel="alternate" type="text/html" title="The Machine Learning Toolbox" /><published>2022-02-06T00:00:00-06:00</published><updated>2022-02-06T00:00:00-06:00</updated><id>https://georg.io/The_machine_learning_toolbox</id><content type="html" xml:base="https://georg.io/mltoolbox">&lt;h2 id=&quot;communities&quot;&gt;Communities&lt;/h2&gt;
 
-&lt;h3 id=&quot;communities&quot;&gt;Communities&lt;/h3&gt;
-
-&lt;h4 id=&quot;ml-collective&quot;&gt;ML Collective&lt;/h4&gt;
+&lt;h3 id=&quot;ml-collective&quot;&gt;ML Collective&lt;/h3&gt;
 
 &lt;p&gt;The ML Collective is a nonprofit organization that connects you with other machine learning practicioners.&lt;/p&gt;
 
-&lt;p&gt;https://mlcollective.org/&lt;/p&gt;
+&lt;p&gt;[https://mlcollective.org/]&lt;/p&gt;
 
-&lt;h4 id=&quot;kaggle&quot;&gt;Kaggle&lt;/h4&gt;
+&lt;h3 id=&quot;kaggle&quot;&gt;Kaggle&lt;/h3&gt;
 
 &lt;p&gt;The primary supervised learning machine learning competition platform&lt;/p&gt;
 
-&lt;p&gt;https://www.kaggle.com/&lt;/p&gt;
+&lt;p&gt;[https://www.kaggle.com/]&lt;/p&gt;
 
-&lt;h3 id=&quot;data-manipulation&quot;&gt;Data manipulation&lt;/h3&gt;
+&lt;h2 id=&quot;data-manipulation&quot;&gt;Data manipulation&lt;/h2&gt;
 
-&lt;h4 id=&quot;pandas&quot;&gt;Pandas&lt;/h4&gt;
+&lt;h3 id=&quot;pandas&quot;&gt;Pandas&lt;/h3&gt;
 
 &lt;p&gt;Pandas is the primary data manipulation framework for data scientists in Python.
 It entails and operates on two primary data models: Series, one-dimensional data / table columns, and dataframes, two-dimensional data akin to tables.&lt;/p&gt;
 
-&lt;h5 id=&quot;when-not-to-use-it&quot;&gt;When (not) to use it&lt;/h5&gt;
+&lt;h4 id=&quot;when-not-to-use-it&quot;&gt;When (not) to use it&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Use when the data you’re manipulating fit in memory&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;further-reading&quot;&gt;Further reading&lt;/h5&gt;
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;https://pandas.pydata.org/&lt;/li&gt;
+  &lt;li&gt;[https://pandas.pydata.org/]&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://wesmckinney.com/book/&quot;&gt;Python for Data Analysis, 3rd edition&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Georg Walther</name></author><category term="machine learning" /><category term="data science" /><summary type="html">The machine learning toolbox</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://georg.io/images/code_and_glasses.jpg" /><media:content medium="image" url="https://georg.io/images/code_and_glasses.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Causal inference for decision-making in growth hacking and upselling in Python</title><link href="https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python" rel="alternate" type="text/html" title="Causal inference for decision-making in growth hacking and upselling in Python" /><published>2021-08-18T00:00:00-05:00</published><updated>2021-08-18T00:00:00-05:00</updated><id>https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python</id><content type="html" xml:base="https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python">&lt;!--
+&lt;/ul&gt;</content><author><name>Georg Walther</name></author><category term="machine learning" /><category term="data science" /><summary type="html">Communities</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://georg.io/images/code_and_glasses.jpg" /><media:content medium="image" url="https://georg.io/images/code_and_glasses.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Causal inference for decision-making in growth hacking and upselling in Python</title><link href="https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python" rel="alternate" type="text/html" title="Causal inference for decision-making in growth hacking and upselling in Python" /><published>2021-08-18T00:00:00-05:00</published><updated>2021-08-18T00:00:00-05:00</updated><id>https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python</id><content type="html" xml:base="https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
