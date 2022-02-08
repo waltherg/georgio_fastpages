@@ -138,12 +138,26 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#kaggle">Kaggle</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#data-manipulation">Data manipulation</a>
+<li class="toc-entry toc-h2"><a href="#concepts">Concepts</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#degenerate-feedback-loops">Degenerate feedback loops</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#further-reading">Further reading</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#data-distribution-shift">Data distribution shift</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#further-reading-1">Further reading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#frameworks">Frameworks</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#pandas">Pandas</a>
 <ul>
 <li class="toc-entry toc-h4"><a href="#when-not-to-use-it">When (not) to use it</a></li>
-<li class="toc-entry toc-h4"><a href="#further-reading">Further reading</a></li>
+<li class="toc-entry toc-h4"><a href="#further-reading-2">Further reading</a></li>
 </ul>
 </li>
 </ul>
@@ -156,17 +170,94 @@ window.onload = wrap_img;
 
 <p>The ML Collective is a nonprofit organization that connects you with other machine learning practicioners.</p>
 
-<p>[https://mlcollective.org/]</p>
+<p><a href="https://mlcollective.org/">Link to ML Collective</a></p>
 
 <h3 id="kaggle">
 <a class="anchor" href="#kaggle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kaggle</h3>
 
 <p>The primary supervised learning machine learning competition platform</p>
 
-<p>[https://www.kaggle.com/]</p>
+<p><a href="https://www.kaggle.com/">Link to Kaggle</a></p>
 
-<h2 id="data-manipulation">
-<a class="anchor" href="#data-manipulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data manipulation</h2>
+<h2 id="concepts">
+<a class="anchor" href="#concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concepts</h2>
+
+<h3 id="degenerate-feedback-loops">
+<a class="anchor" href="#degenerate-feedback-loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Degenerate feedback loops</h3>
+
+<ul>
+  <li>Predictions influence feedback, where the feedback is used to extract labels (e.g. recommender systems that propose popular items based on how often they’re clicked),</li>
+  <li>Detect degenerate feedback loops using aggregate diversity or average coverage of long tail items,</li>
+  <li>Introduce randomization into recommendations / predictions to gather more realistic feedback (downside user experience),</li>
+  <li>Capture features of popularity (e.g. position in recommendation list) for prediction model,</li>
+</ul>
+
+<h4 id="further-reading">
+<a class="anchor" href="#further-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further reading</h4>
+
+<ul>
+  <li><a href="https://docs.google.com/document/d/14uX2m9q7BUn_mgnM3h6if-s-r0MZrvDb-ZHNjgA1Uyo/edit?usp=sharing">Write-up by Chip Huyen</a></li>
+</ul>
+
+<h3 id="data-distribution-shift">
+<a class="anchor" href="#data-distribution-shift" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data distribution shift</h3>
+
+<p>For our machine learning model we call the inputs X and the outouts Y.
+The training data in supervised learning is a sample of the (unknown) joint distribution P(X, Y).
+In machine learning we usually model P(Y|X) - i.e. the conditional probability of the output given some observed input.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>P(X, Y) = P(X</td>
+      <td>Y) P(Y) = P(Y</td>
+      <td>X) P(X)</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Covariate shift: P(X) changes while P(Y</td>
+          <td>X) is unchanged (distribution of the input changes but the distribution of the output given the input is unchanged)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Label shift: P(Y) changes while P(X</td>
+          <td>Y) is unchanged</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Concept drift: P(Y</td>
+          <td>X) changes while P(X) is unchanged</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h4 id="further-reading-1">
+<a class="anchor" href="#further-reading-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further reading</h4>
+
+<ul>
+  <li><a href="https://docs.google.com/document/d/14uX2m9q7BUn_mgnM3h6if-s-r0MZrvDb-ZHNjgA1Uyo/edit?usp=sharing">Write-up by Chip Huyen</a></li>
+</ul>
+
+<h2 id="frameworks">
+<a class="anchor" href="#frameworks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Frameworks</h2>
 
 <h3 id="pandas">
 <a class="anchor" href="#pandas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pandas</h3>
@@ -181,11 +272,11 @@ It entails and operates on two primary data models: Series, one-dimensional data
   <li>Use when the data you’re manipulating fit in memory</li>
 </ul>
 
-<h4 id="further-reading">
-<a class="anchor" href="#further-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further reading</h4>
+<h4 id="further-reading-2">
+<a class="anchor" href="#further-reading-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Further reading</h4>
 
 <ul>
-  <li>[https://pandas.pydata.org/]</li>
+  <li><a href="https://pandas.pydata.org/">Link to pandas documentation</a></li>
   <li><a href="https://wesmckinney.com/book/">Python for Data Analysis, 3rd edition</a></li>
 </ul>
 

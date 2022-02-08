@@ -1,18 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://georg.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://georg.io/" rel="alternate" type="text/html" /><updated>2022-02-06T13:29:45-06:00</updated><id>https://georg.io/feed.xml</id><title type="html">georg.io</title><subtitle>My personal blog on tech and data</subtitle><entry><title type="html">The Machine Learning Toolbox</title><link href="https://georg.io/mltoolbox" rel="alternate" type="text/html" title="The Machine Learning Toolbox" /><published>2022-02-06T00:00:00-06:00</published><updated>2022-02-06T00:00:00-06:00</updated><id>https://georg.io/The_machine_learning_toolbox</id><content type="html" xml:base="https://georg.io/mltoolbox">&lt;h2 id=&quot;communities&quot;&gt;Communities&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://georg.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://georg.io/" rel="alternate" type="text/html" /><updated>2022-02-08T14:13:01-06:00</updated><id>https://georg.io/feed.xml</id><title type="html">georg.io</title><subtitle>My personal blog on tech and data</subtitle><entry><title type="html">The Machine Learning Toolbox</title><link href="https://georg.io/mltoolbox" rel="alternate" type="text/html" title="The Machine Learning Toolbox" /><published>2022-02-06T00:00:00-06:00</published><updated>2022-02-06T00:00:00-06:00</updated><id>https://georg.io/The_machine_learning_toolbox</id><content type="html" xml:base="https://georg.io/mltoolbox">&lt;h2 id=&quot;communities&quot;&gt;Communities&lt;/h2&gt;
 
 &lt;h3 id=&quot;ml-collective&quot;&gt;ML Collective&lt;/h3&gt;
 
 &lt;p&gt;The ML Collective is a nonprofit organization that connects you with other machine learning practicioners.&lt;/p&gt;
 
-&lt;p&gt;[https://mlcollective.org/]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mlcollective.org/&quot;&gt;Link to ML Collective&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;kaggle&quot;&gt;Kaggle&lt;/h3&gt;
 
 &lt;p&gt;The primary supervised learning machine learning competition platform&lt;/p&gt;
 
-&lt;p&gt;[https://www.kaggle.com/]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.kaggle.com/&quot;&gt;Link to Kaggle&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;data-manipulation&quot;&gt;Data manipulation&lt;/h2&gt;
+&lt;h2 id=&quot;concepts&quot;&gt;Concepts&lt;/h2&gt;
+
+&lt;h3 id=&quot;degenerate-feedback-loops&quot;&gt;Degenerate feedback loops&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Predictions influence feedback, where the feedback is used to extract labels (e.g. recommender systems that propose popular items based on how often they’re clicked),&lt;/li&gt;
+  &lt;li&gt;Detect degenerate feedback loops using aggregate diversity or average coverage of long tail items,&lt;/li&gt;
+  &lt;li&gt;Introduce randomization into recommendations / predictions to gather more realistic feedback (downside user experience),&lt;/li&gt;
+  &lt;li&gt;Capture features of popularity (e.g. position in recommendation list) for prediction model,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/14uX2m9q7BUn_mgnM3h6if-s-r0MZrvDb-ZHNjgA1Uyo/edit?usp=sharing&quot;&gt;Write-up by Chip Huyen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data-distribution-shift&quot;&gt;Data distribution shift&lt;/h3&gt;
+
+&lt;p&gt;For our machine learning model we call the inputs X and the outouts Y.
+The training data in supervised learning is a sample of the (unknown) joint distribution P(X, Y).
+In machine learning we usually model P(Y|X) - i.e. the conditional probability of the output given some observed input.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;P(X, Y) = P(X&lt;/td&gt;
+      &lt;td&gt;Y) P(Y) = P(Y&lt;/td&gt;
+      &lt;td&gt;X) P(X)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Covariate shift: P(X) changes while P(Y&lt;/td&gt;
+          &lt;td&gt;X) is unchanged (distribution of the input changes but the distribution of the output given the input is unchanged)&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Label shift: P(Y) changes while P(X&lt;/td&gt;
+          &lt;td&gt;Y) is unchanged&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;Concept drift: P(Y&lt;/td&gt;
+          &lt;td&gt;X) changes while P(X) is unchanged&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;further-reading-1&quot;&gt;Further reading&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/14uX2m9q7BUn_mgnM3h6if-s-r0MZrvDb-ZHNjgA1Uyo/edit?usp=sharing&quot;&gt;Write-up by Chip Huyen&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;frameworks&quot;&gt;Frameworks&lt;/h2&gt;
 
 &lt;h3 id=&quot;pandas&quot;&gt;Pandas&lt;/h3&gt;
 
@@ -25,10 +97,10 @@ It entails and operates on two primary data models: Series, one-dimensional data
   &lt;li&gt;Use when the data you’re manipulating fit in memory&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&quot;further-reading&quot;&gt;Further reading&lt;/h4&gt;
+&lt;h4 id=&quot;further-reading-2&quot;&gt;Further reading&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;[https://pandas.pydata.org/]&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://pandas.pydata.org/&quot;&gt;Link to pandas documentation&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://wesmckinney.com/book/&quot;&gt;Python for Data Analysis, 3rd edition&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Georg Walther</name></author><category term="machine learning" /><category term="data science" /><summary type="html">Communities</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://georg.io/images/code_and_glasses.jpg" /><media:content medium="image" url="https://georg.io/images/code_and_glasses.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Causal inference for decision-making in growth hacking and upselling in Python</title><link href="https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python" rel="alternate" type="text/html" title="Causal inference for decision-making in growth hacking and upselling in Python" /><published>2021-08-18T00:00:00-05:00</published><updated>2021-08-18T00:00:00-05:00</updated><id>https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python</id><content type="html" xml:base="https://georg.io/2021/08/18/Causal_inference_for_decision_making_in_growth_hacking_and_upselling_in_Python">&lt;!--
 #################################################
