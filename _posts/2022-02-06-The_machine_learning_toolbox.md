@@ -16,13 +16,13 @@ image: images/code_and_glasses.jpg
 
 The ML Collective is a nonprofit organization that connects you with other machine learning practicioners.
 
-[https://mlcollective.org/]
+[Link to ML Collective](https://mlcollective.org/)
 
 ### Kaggle
 
 The primary supervised learning machine learning competition platform
 
-[https://www.kaggle.com/]
+[Link to Kaggle](https://www.kaggle.com/)
 
 ## Data manipulation
 
@@ -37,5 +37,5 @@ It entails and operates on two primary data models: Series, one-dimensional data
 
 #### Further reading
 
-- [https://pandas.pydata.org/]
+- [Link to pandas documentation](https://pandas.pydata.org/)
 - [Python for Data Analysis, 3rd edition](https://wesmckinney.com/book/)
